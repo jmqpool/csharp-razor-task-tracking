@@ -9,14 +9,15 @@ namespace Tasker.Pages
 {
     public class CreateTaskModel : PageModel
     {
-        [BindProperty]
-        public Task NewTask();
+        //[BindProperty]
+        //public Task NewTask() { }
         public void OnGet()
         {
-         }
+        }
         public IActionResult OnPost()
         {
             return RedirectToPage("Index");
         }
 
     }
+}
