@@ -10,7 +10,7 @@ namespace Tasker.Pages
     public class IndexModel : PageModel
     {
 
-        public IEnumerable<Task> Tasks;
+        public IEnumerable<Task> Tasks { get; set; }
 
 
         private ApplicationDbContext _context;
@@ -20,8 +20,8 @@ namespace Tasker.Pages
 
         public void OnGet()
         {
-            Tasks = _context.Tasks;
-            Tasks.OrderBy(x => x.Priority);
+            Tasks = _context.Tasks.OrderBy(x => x.Priority);
+       
                 
         }
     }
