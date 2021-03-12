@@ -5,7 +5,7 @@
 }
 <h1>All Tasks</h1>
 <table>
-
+    <thead>
     <tr>
         <th>Id</th>
         <th>Title</th>
@@ -14,20 +14,14 @@
     </tr>
     </thead>
 
-    @foreach (Tasker.Task task in Model.Tasks)
-
+    @foreach (var task in Model.Tasks)
     {
         <tr>
-
-        
-            <td>task.Id</td>
-            <td>task.Title</td>
-            <td>task.Description</td>
-            <td>task.Priority</td>
-    
-
+            <td>@task.Id</td>
+            <td>@task.Title</td>
+            <td>@task.Description</td>
+            <td>@task.Priority</td>
         </tr>
-
     }
 
 </table>
